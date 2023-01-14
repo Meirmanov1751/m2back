@@ -1,11 +1,11 @@
 const express = require('express')
 var bodyParser = require('body-parser')
 const mongoose = require("mongoose");
-const routes = require('./main/routes/routes')
+const routes = require('./app/routes/routes')
 const app = express()
 var cors = require('cors')
-const db = require("./main/models");
-const Role = require("../app/main/models/role.model");
+const db = require("./app/models");
+const Role = require("./app/models/role.model");
 
 app.use(cors());
 app.use(function (req, res, next) {
@@ -28,8 +28,8 @@ app.get("/", (req, res) => {
   res.json({ message: "Welcome to bezkoder application." });
 });
 
-require('./main/routes/auth.routes')(app);
-require('./main/routes/user.routes')(app);
+require('./app/routes/auth.routes')(app);
+require('./app/routes/user.routes')(app);
 
 async function start() {
   try {

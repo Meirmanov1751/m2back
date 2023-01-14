@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8d33aae2-2468-4ecf-99ac-0793ca6b1803" name="Changes" comment="new commit 14.01.2023">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/m2/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/m2/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.env.sample" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/m2/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/m2/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/main/config/auth.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/m2/app/config/auth.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/main/config/db.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/m2/app/config/db.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/main/controllers/apartment.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/m2/app/controllers/apartment.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/main/controllers/apartment.image.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/m2/app/controllers/apartment.image.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/main/controllers/auth.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/m2/app/controllers/auth.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/main/controllers/building.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/m2/app/controllers/building.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/main/controllers/building.image.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/m2/app/controllers/building.image.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/main/controllers/city.conteroller.js" beforeDir="false" afterPath="$PROJECT_DIR$/m2/app/controllers/city.conteroller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/main/controllers/upload.js" beforeDir="false" afterPath="$PROJECT_DIR$/m2/app/controllers/upload.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/main/controllers/user.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/m2/app/controllers/user.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/main/middlewares/authJwt.js" beforeDir="false" afterPath="$PROJECT_DIR$/m2/app/middlewares/authJwt.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/main/middlewares/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/m2/app/middlewares/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/main/middlewares/upload.js" beforeDir="false" afterPath="$PROJECT_DIR$/m2/app/middlewares/upload.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/main/middlewares/verifySignUp.js" beforeDir="false" afterPath="$PROJECT_DIR$/m2/app/middlewares/verifySignUp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/main/models/Post.js" beforeDir="false" afterPath="$PROJECT_DIR$/m2/app/models/Post.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/main/models/apartment.image.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/m2/app/models/apartment.image.model.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/main/models/apartment.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/m2/app/models/apartment.model.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/main/models/building.image.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/m2/app/models/building.image.model.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/main/models/building.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/m2/app/models/building.model.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/main/models/city.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/m2/app/models/city.model.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/main/models/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/m2/app/models/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/main/models/role.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/m2/app/models/role.model.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/main/models/user.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/m2/app/models/user.model.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/main/routes/auth.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/m2/app/routes/auth.routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/main/routes/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/m2/app/routes/routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/main/routes/user.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/m2/app/routes/user.routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/m2/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/m2/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/m2/docker-compose.yml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2KEC08a933mtszef2T0AKbSqK4w" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/kassi/Desktop/m2/m2_back/app/main/controllers",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\kassi\Desktop\m2\m2_back\app\main\controllers" />
+      <recent name="C:\Users\kassi\Desktop\m2\m2_back\app\main\routes" />
+      <recent name="C:\Users\kassi\Desktop\m2\m2_back\app\main\middlewares" />
+      <recent name="C:\Users\kassi\Desktop\m2\m2_back\app\main\models" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\kassi\Desktop\m2\m2_back\app" />
+      <recent name="C:\Users\kassi\Desktop\m2\m2_back" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8d33aae2-2468-4ecf-99ac-0793ca6b1803" name="Changes" comment="" />
+      <created>1673530134560</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1673530134560</updated>
+      <workItem from="1673530136016" duration="28000" />
+      <workItem from="1673530983465" duration="509000" />
+      <workItem from="1673532024142" duration="1325000" />
+      <workItem from="1673546383753" duration="3053000" />
+      <workItem from="1673572004227" duration="4202000" />
+      <workItem from="1673680628136" duration="13383000" />
+    </task>
+    <task id="LOCAL-00001" summary="new commit 14.01.2023">
+      <created>1673701037567</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1673701037567</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="new commit 14.01.2023" />
+    <option name="LAST_COMMIT_MESSAGE" value="new commit 14.01.2023" />
+  </component>
+</project>
