@@ -11,13 +11,15 @@ exports.postApartment = async (req, res) => {
   const name = req.body.name;
   const area = req.body.area
   const soldArea = req.body.soldArea
+  const building = req.body.building
 
   res.send(req.body.name);
 
   const post = new model.Apartment({
     name : name,
     area : area,
-    soldArea : soldArea
+    soldArea : soldArea,
+    building : building
   });
   post.save(function (err) {
     if (err) return console.log(err);
@@ -41,11 +43,13 @@ exports.putApartment= async (req, res) => {
     const name = req.body.name;
     const area = req.body.area
     const soldArea = req.body.soldArea
+    const building = req.body.building
 
     const apartment = await model.Apartment.findOneAndUpdate({_id: req.params.id}, {
       name : name,
       area : area,
-      soldArea : soldArea
+      soldArea : soldArea,
+      building : building
     });
 
     await apartment.save();

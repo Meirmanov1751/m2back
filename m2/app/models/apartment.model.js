@@ -6,5 +6,6 @@ exports.Apartment = mongoose.model(
     name: String,
     area: Number,
     soldArea: Number,
+    building: {type: mongoose.Types.ObjectId, ref: "Building"},
   })
 );

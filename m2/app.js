@@ -1,11 +1,23 @@
-const express = require('express')
-var bodyParser = require('body-parser')
+const express = require('express');
 const mongoose = require("mongoose");
-const routes = require('./app/routes/routes')
-const app = express()
-var cors = require('cors')
-const db = require("./app/models");
+const routes = require('./app/routes/routes');
+const app = express();
+const cors = require('cors');
+
+const AdminJS = require('adminjs');
+const AdminJSExpress = require('@adminjs/express');
+const AdminJSMongoose = require("@adminjs/mongoose");
+const adminConfig = require("./app/config/admin");
+
 const Role = require("./app/models/role.model");
+const User = require("./app/models/user.model");
+const {Building} = require("./app/models/building.model");
+const {BuildingImage} = require("./app/models/building.image.model");
+const {Apartment} = require("./app/models/apartment.model");
+const {ApartmentImage} = require("./app/models/apartment.image.model");
+const {City} = require("./app/models/city.model");
+
+AdminJS.registerAdapter(AdminJSMongoose);
 
 app.use(cors());
 app.use(function (req, res, next) {
@@ -16,13 +28,9 @@ app.use(function (req, res, next) {
   next();
 });
 
-app.use(express.urlencoded({extended: true}))
-app.use(bodyParser.urlencoded({extended: true}));
-app.use(bodyParser.json());
+app.use('/api', routes);
 
-app.use('/api', routes)
-
-const PORT = 5000
+const PORT = 5000;
 
 app.get("/", (req, res) => {
   res.json({ message: "Welcome to bezkoder application." });
@@ -31,7 +39,48 @@ app.get("/", (req, res) => {
 require('./app/routes/auth.routes')(app);
 require('./app/routes/user.routes')(app);
 
+const authenticate = async (email, password) => {
+  if (email === adminConfig.DEFAULT_ADMIN.email && password === adminConfig.DEFAULT_ADMIN.password) {
+    return Promise.resolve(adminConfig.DEFAULT_ADMIN);
+  };
+  return null;
+}
+
 async function start() {
+  const adminJs = new AdminJS({
+    resources:[
+      {resource: Building},
+      {resource: Apartment},
+      {resource: City},
+      {resource: BuildingImage},
+      {resource: ApartmentImage},
+      {resource: Role},
+      {resource: User},
+    ],
+    rootPath: "/admin",
+    });
+  const adminRouter = AdminJSExpress.buildAuthenticatedRouter(
+    adminJs,
+    {
+      authenticate,
+      cookieName: 'adminjs',
+      cookiePassword: 'sessionsecret',
+    },
+    null,
+    {
+      resave: true,
+      saveUninitialized: true,
+      secret: 'sessionsecret',
+      cookie: {
+        httpOnly: process.env.NODE_ENV === 'production',
+        secure: process.env.NODE_ENV === 'production',
+      },
+      name: 'adminjs',
+    }
+  );
+// Build and use a router to handle AdminJS routes.
+  const router = AdminJSExpress.buildRouter(adminJs, adminRouter);
+  app.use(adminJs.options.rootPath, router);
   try {
     await mongoose.connect("mongodb+srv://Daulet:qazaqway@cluster0.rhykf.mongodb.net/?retryWrites=true&w=majority", {
       useNewUrlParser: true,
@@ -45,12 +94,12 @@ async function start() {
           console.error("Connection error", err);
           process.exit();
         });
-    app.listen(PORT, () => console.log(`App has been started on port ${PORT}...`))
+    app.listen(PORT, () => console.log(`AdminJS started on http://localhost:${PORT}${adminJs.options.rootPath}`))
   } catch (e) {
     console.log(`server error ${e.message}`)
     process.exit(1)
-  }
-}
+  };
+};
 
 function initial() {
   Role.estimatedDocumentCount((err, count) => {
@@ -86,7 +135,7 @@ function initial() {
       });
     }
   });
-}
+};
 
 start()
 
