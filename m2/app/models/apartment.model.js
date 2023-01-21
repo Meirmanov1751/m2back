@@ -7,5 +7,7 @@ exports.Apartment = mongoose.model(
     area: Number,
     soldArea: Number,
     building: {type: mongoose.Types.ObjectId, ref: "Building"},
-  })
+  },
+    { timestamps: true }
+  )
 );

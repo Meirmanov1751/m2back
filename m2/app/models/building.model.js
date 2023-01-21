@@ -10,5 +10,7 @@ exports.Building = mongoose.model(
     cityId: {type: mongoose.Types.ObjectId, ref: "City"},
     totalArea: Number,
     decription: String,
-  })
+  },
+    { timestamps: true }
+  )
 );

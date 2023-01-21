@@ -1,8 +1,13 @@
 const model = require("../models/building.model");
 
 exports.getBuilding = async (req, res) => {
-  const building = await model.Building.find();
-  res.send(building);
+  if(req.query["name"]){
+    const building = await model.Building.find({"name": new RegExp(req.query["name"], "i")}).sort({"name": 1});
+    res.send(building);
+  } else {
+    const building = await model.Building.find();
+    res.send(building);
+  };
 };
 
 exports.postBuilding = async (req, res) => {

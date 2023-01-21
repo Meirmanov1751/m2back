@@ -5,5 +5,7 @@ exports.BuildingImage = mongoose.model(
   new mongoose.Schema({
     buildingId: {type: mongoose.Types.ObjectId, ref: "Building"},
     image: String,
-  })
+  },
+    { timestamps: true }
+  )
 );

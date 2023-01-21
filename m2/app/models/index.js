@@ -1,4 +1,4 @@
-const config = require("../config/db.config.js");
+/*const config = require("../config/db.config.js");
 
 const Sequelize = require("sequelize");
 const sequelize = new Sequelize(
@@ -45,4 +45,4 @@ db.user.hasOne(db.refreshToken, {
 
 db.ROLES = ["user", "admin", "moderator"];
 
-module.exports = db;
+module.exports = db;*/
