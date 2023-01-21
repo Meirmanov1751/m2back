@@ -21,6 +21,7 @@ exports.postApartment = async (req, res) => {
     soldArea : soldArea,
     building : building
   });
+
   post.save(function (err) {
     if (err) return console.log(err);
     console.log(req.body)

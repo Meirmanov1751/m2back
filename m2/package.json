@@ -29,7 +29,10 @@
     "express-formidable": "^1.2.0",
     "express-session": "^1.17.3",
     "jsonwebtoken": "^8.5.1",
+    "jwt-redis": "^7.0.3",
     "mongoose": "^6.8.3",
+    "redis": "^4.5.1",
+    "sequelize": "^6.28.0",
     "tslib": "^2.4.1"
   }
 }

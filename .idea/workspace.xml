@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8d33aae2-2468-4ecf-99ac-0793ca6b1803" name="Changes" comment="new commit 16.01.2023">
-      <change afterPath="$PROJECT_DIR$/m2/app/config/admin.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/m2/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/m2/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/m2/app/controllers/apartment.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/m2/app/controllers/apartment.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/m2/app/models/apartment.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/m2/app/models/apartment.model.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/m2/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/m2/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/m2/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/m2/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/m2/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/m2/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +65,7 @@
       <workItem from="1673546383753" duration="3053000" />
       <workItem from="1673572004227" duration="4202000" />
       <workItem from="1673680628136" duration="16191000" />
-      <workItem from="1673844501270" duration="6751000" />
+      <workItem from="1673844501270" duration="7701000" />
     </task>
     <task id="LOCAL-00001" summary="new commit 14.01.2023">
       <created>1673701037567</created>
@@ -95,7 +88,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673702332128</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="new commit 16.01.2023">
+      <created>1673868396800</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1673868396800</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

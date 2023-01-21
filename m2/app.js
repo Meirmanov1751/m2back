@@ -16,6 +16,7 @@ const {BuildingImage} = require("./app/models/building.image.model");
 const {Apartment} = require("./app/models/apartment.model");
 const {ApartmentImage} = require("./app/models/apartment.image.model");
 const {City} = require("./app/models/city.model");
+const {RefreshToken} = require("./app/models/refreshToken.model")
 
 AdminJS.registerAdapter(AdminJSMongoose);
 
@@ -56,6 +57,7 @@ async function start() {
       {resource: ApartmentImage},
       {resource: Role},
       {resource: User},
+      {resource: RefreshToken},
     ],
     rootPath: "/admin",
     });

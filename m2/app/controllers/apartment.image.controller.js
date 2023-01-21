@@ -15,7 +15,7 @@ exports.postApartmentImage = async (req, res) => {
 
   const post = new model.ApartmentImage({
       image : image,
-      buildingId : apartmentId
+      apartmentId : apartmentId
   });
   post.save(function (err) {
     if (err) return console.log(err);
