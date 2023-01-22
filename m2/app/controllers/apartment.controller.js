@@ -1,8 +1,13 @@
 const model = require("../models/apartment.model");
 
 exports.getApartment= async (req, res) => {
-  const apartment = await model.Apartment.find();
-  res.send(apartment);
+  if(req.query["name"]){
+    const apartment = await model.Apartment.find({"name": new RegExp(req.query["name"], "i")}).sort({"name": 1});
+    res.send(apartment);
+  } else {
+    const apartment = await model.Apartment.find();
+    res.send(apartment);
+  };
 };
 
 exports.postApartment = async (req, res) => {
