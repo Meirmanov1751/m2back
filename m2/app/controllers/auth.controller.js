@@ -3,10 +3,6 @@ const User = require("../models/user.model");
 const Role = require("../models/role.model");
 const {RefreshToken} = require("../models/refreshToken.model")
 
-var redis = require('redis');
-var JWTR =  require('jwt-redis').default;
-var redisClient = redis.createClient();
-var jwtr = new JWTR(redisClient);
 var jwt = require("jsonwebtoken");
 var bcrypt = require("bcryptjs");
 
@@ -155,6 +151,19 @@ exports.refreshToken = async (req, res) => {
   }
 };
 
-exports.logout = async (req, res, next) => {
-  jwtr.destroy(req.header.Authorization)
+exports.logout = async (req, res) => {
+  const token = req.headers.authorization;
+  try{
+    var decode = jwt.verify(token, config.secret);
+    const user = await User.findOne({token});
+    if(!user) {
+      res.status(401).json({message: 'Invalid token'});
+    }
+    // Сброс токена в базе данных
+    user.token = "";
+    await user.save();
+    res.json({message: 'Logout successful'});
+  }catch (err) {
+    res.status(401).json({message: 'Invalid token'});
+  }
 }

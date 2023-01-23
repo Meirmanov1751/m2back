@@ -1,6 +1,5 @@
 const express = require('express');
 const mongoose = require("mongoose");
-const routes = require('./app/routes/routes');
 const app = express();
 const cors = require('cors');
 
@@ -18,9 +17,18 @@ const {ApartmentImage} = require("./app/models/apartment.image.model");
 const {City} = require("./app/models/city.model");
 const {RefreshToken} = require("./app/models/refreshToken.model")
 
+const cityRoutes = require('./app/routes/city.routes');
+const buildingRoutes = require('./app/routes/building.routes');
+const buildingImageRoutes = require('./app/routes/building.image.routes');
+const apartmentRoutes = require('./app/routes/apartment.routes');
+const apartmentImageRoutes = require('./app/routes/apartment.image.routes');
+
 AdminJS.registerAdapter(AdminJSMongoose);
 
+app.use(express.json())
+
 app.use(cors());
+
 app.use(function (req, res, next) {
   res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE,PATCH');
@@ -29,16 +37,20 @@ app.use(function (req, res, next) {
   next();
 });
 
-app.use('/api', routes);
+app.use('/api', cityRoutes );
+app.use('/api', buildingRoutes );
+app.use('/api', buildingImageRoutes );
+app.use('/api', apartmentRoutes );
+app.use('/api', apartmentImageRoutes );
+
+require('./app/routes/auth.routes')(app);
+require('./app/routes/user.routes')(app);
 
 const PORT = 5000;
 
 app.get("/", (req, res) => {
-  res.json({ message: "Welcome to bezkoder application." });
+  res.json({ message: "Welcome to m2 application." });
 });
-
-require('./app/routes/auth.routes')(app);
-require('./app/routes/user.routes')(app);
 
 const authenticate = async (email, password) => {
   if (email === adminConfig.DEFAULT_ADMIN.email && password === adminConfig.DEFAULT_ADMIN.password) {
@@ -140,4 +152,6 @@ function initial() {
 };
 
 start()
+
+module.exports = app;
 
